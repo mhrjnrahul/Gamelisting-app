@@ -32,10 +32,10 @@ const Header = () => {
         <div className='pr-2 cursor-pointer'>
             {theme==="light" ? 
             <HiMoon className='text-[35px] bg-slate-200 text-black p-1 rounded'
-            onClick={() => setTheme('dark')}/>
+            onClick={() => {setTheme('dark'); localStorage.setItem('theme', 'dark')}}/>
             : 
             <HiSun className='text-[35px] bg-slate-200 text-black p-1 rounded'
-            onClick={() => setTheme('light')}/>}
+            onClick={() => {setTheme('light'); localStorage.setItem('theme', 'light')}}/>}
         </div>
     </div>
   )
